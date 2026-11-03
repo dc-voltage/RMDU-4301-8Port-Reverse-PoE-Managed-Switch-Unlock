@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """
-RMDU Device Manager & Telemetry Reader
-Can query hardware sensor data, temperature, PoE port states, and control modes.
+==============================================================================
+Project: RMDU-4301 / 4311 Unlock Toolkit
+Developer: DC-Voltage Network (https://github.com/dc-voltage)
+Description: Hardware Telemetry, PoE Status & Mode Controller
+==============================================================================
 """
 
 import sys
@@ -26,7 +29,11 @@ def run_command(ser, cmd, wait=0.5):
     return out.decode("utf-8", errors="replace").strip()
 
 def main():
-    parser = argparse.ArgumentParser(description="RMDU Hardware Control & Info")
+    print("=" * 60)
+    print("  DC-Voltage Network — RMDU Hardware Manager & Telemetry  ")
+    print("=" * 60)
+
+    parser = argparse.ArgumentParser(description="DC-Voltage Network — RMDU Hardware Control")
     parser.add_argument("-p", "--port", default="/dev/ttyUSB0", help="Serial port")
     parser.add_argument("-b", "--baud", type=int, default=38400, help="Baud rate")
     parser.add_argument("--info", action="store_true", help="Display SoC, temperature, and PoE status")

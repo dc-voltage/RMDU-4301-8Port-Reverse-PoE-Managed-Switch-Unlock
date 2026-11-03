@@ -1,14 +1,14 @@
 # RMDU-4301 / 4311 — 8-Port Reverse PoE Managed Switch & Router Unlock Guide
 
 <p align="center">
-  <a href="https://github.com/dc-voltage"><img src="https://img.shields.io/badge/Author-DC--Voltage-blue.svg?style=for-the-badge&logo=github" alt="Author"></a>
+  <a href="https://github.com/dc-voltage"><img src="https://img.shields.io/badge/Developer-DC--Voltage%20Network-blue.svg?style=for-the-badge&logo=github" alt="DC-Voltage Network"></a>
   <a href="#hardware-specifications"><img src="https://img.shields.io/badge/Device-RMDU--4301%20%2F%204311-orange.svg?style=for-the-badge" alt="Device"></a>
   <a href="#hardware-specifications"><img src="https://img.shields.io/badge/SoC-Realtek%20RTL8197FS-success.svg?style=for-the-badge" alt="SoC"></a>
   <a href="#hardware-specifications"><img src="https://img.shields.io/badge/Switch-8--Port%20Managed%20RTL83xx-blueviolet.svg?style=for-the-badge" alt="Switch"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License"></a>
 </p>
 
-A comprehensive reverse-engineering, hardware analysis, and unlock guide for the **RMDU-4301 / 4311** (Remote / Reverse Managed Distribution Unit). This guide explains how to repurpose this 8-port telecom Reverse-PoE outdoor distribution unit into a versatile **8-Port Managed Switch**, a **VLAN Segmentation Lab**, or a **Standalone Gateway Router** for home labs, network testing, and multi-device development.
+A comprehensive reverse-engineering, hardware analysis, and unlock toolkit developed by **DC-Voltage Network** for the **RMDU-4301 / 4311** (Remote / Reverse Managed Distribution Unit). This guide explains how to repurpose this 8-port telecom Reverse-PoE outdoor distribution unit into a versatile **8-Port Managed Switch**, a **VLAN Segmentation Lab**, or a **Standalone Gateway Router** for home labs, network testing, and multi-device development.
 
 ---
 
@@ -23,7 +23,7 @@ A comprehensive reverse-engineering, hardware analysis, and unlock guide for the
 8. [Hidden Engineer Web Interfaces](#-hidden-engineer-web-interfaces)
 9. [Operation Modes: Switch vs Router](#-operation-modes-switch-vs-router)
 10. [Hardware Telemetry & Control (`/proc/comtrend/`)](#-hardware-telemetry--control)
-11. [Bundled Scripts](#-bundled-scripts)
+11. [Bundled Scripts by DC-Voltage Network](#-bundled-scripts-by-dc-voltage-network)
 12. [Disclaimer](#-disclaimer)
 
 ---
@@ -230,7 +230,7 @@ echo 1 > /proc/comtrend/LED_G
 
 ---
 
-## 📂 Bundled Scripts
+## 📂 Bundled Scripts by DC-Voltage Network
 
 * **[`scripts/setup_vlan960.sh`](scripts/setup_vlan960.sh)**: Automates tagged VLAN 960 interface creation and teardown on Linux hosts.
 * **[`scripts/monitor_uart.py`](scripts/monitor_uart.py)**: Python UART reader preset to 38400 baud with session logging.
@@ -241,3 +241,10 @@ echo 1 > /proc/comtrend/LED_G
 ## ⚠️ Disclaimer
 
 This repository is strictly for research, educational, and hardware repurposing purposes. Modifying network devices should be done responsibly and on equipment you legally own. All hardware trademarks belong to their respective manufacturers.
+
+---
+
+<p align="center">
+  <b>Developed & Maintained by <a href="https://github.com/dc-voltage">DC-Voltage Network</a></b><br>
+  <sub>© 2026 DC-Voltage Network. Released under the MIT License.</sub>
+</p>

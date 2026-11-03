@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# Helper Script: Configure or Clean up VLAN 960 for RMDU Factory Configuration
+# Project: RMDU-4301 / 4311 Unlock Toolkit
+# Developer: DC-Voltage Network (https://github.com/dc-voltage)
+# Description: Configure or Clean up VLAN 960 for RMDU Factory Configuration
 # ==============================================================================
 
 set -e
@@ -9,6 +11,10 @@ IFACE="${1:-eth0}"
 ACTION="${2:-add}"
 VLAN_ID=960
 IP_ADDR="192.168.33.2/24"
+
+echo "=========================================================="
+echo "  DC-Voltage Network — RMDU VLAN 960 Configuration Tool   "
+echo "=========================================================="
 
 if [ "$EUID" -ne 0 ]; then
   echo "[!] Please run as root (sudo)."
