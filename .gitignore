@@ -1,0 +1,9 @@
+# Logs and scratch files
+*.log
+uart_session.log
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db
